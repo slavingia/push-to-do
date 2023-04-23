@@ -35,6 +35,10 @@ struct Push_To_DoApp: App {
         }
     }
     
+    func getInternalIntegrationToken() -> String? {
+        return UserDefaults.standard.string(forKey: "internalIntegrationToken")
+    }
+
     func getAddToDatabase() -> Bool {
         return UserDefaults.standard.bool(forKey: "addToDatabase")
     }

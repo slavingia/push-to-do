@@ -3,12 +3,22 @@ import Alamofire
 import NotionSwift
 
 class WhisperNotionManager: ObservableObject {
-    @Published var notionClient: NotionClient
+    @Published var notionClient: NotionClient?
 
     init() {
-        print(getInternalIntegrationToken()!)
-        let notion = NotionClient(accessKeyProvider: StringAccessKeyProvider(accessKey: getInternalIntegrationToken()!))
-        notionClient = notion
+        do {
+            if let internalIntegrationToken = getInternalIntegrationToken() {
+                print(internalIntegrationToken)
+                let notion = NotionClient(accessKeyProvider: StringAccessKeyProvider(accessKey: internalIntegrationToken))
+                notionClient = notion
+            } else {
+                notionClient = nil
+                throw NSError(domain: "NotionClientInitializationError", code: 1, userInfo: [NSLocalizedDescriptionKey: "Internal Integration Token is missing"])
+            }
+        } catch {
+            print("Error initializing NotionClient: \(error.localizedDescription)")
+            // You can choose to do nothing here if you want to handle the error silently
+        }
     }
 
     func transcribeAudio(audioUrl: URL, completion: @escaping (String?) -> Void) {
@@ -54,7 +64,7 @@ class WhisperNotionManager: ObservableObject {
                 ]
             )
 
-            notionClient.pageCreate(request: request) {
+            notionClient!.pageCreate(request: request) {
                 print($0)
             }
         } else {
@@ -63,7 +73,7 @@ class WhisperNotionManager: ObservableObject {
             let blocks: [WriteBlock] = [
                 .toDo([RichText(string: trimmedText)])
             ]
-            notionClient.blockAppend(blockId: pageId, children: blocks) {
+            notionClient!.blockAppend(blockId: pageId, children: blocks) {
                 print($0)
             }
         }
