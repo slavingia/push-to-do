@@ -1,4 +1,12 @@
-# push-to-do
+# Push To-Do
+
+The fastest, simplest way to add to-dos to Notion.
+
+### How to use
+
+Upon opening, Push To-Do will be recording. Tap the button once you are finished talking to create a new to-do.
+
+### How to setup
 
 1. Create a Notion integration: https://developers.notion.com/docs/create-a-notion-integration
 
