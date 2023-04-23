@@ -11,6 +11,12 @@
 		BA19308729F4847F009EBFFB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA19308629F4847F009EBFFB /* ContentView.swift */; };
 		BA19308929F48480009EBFFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA19308829F48480009EBFFB /* Assets.xcassets */; };
 		BA19308C29F48480009EBFFB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA19308B29F48480009EBFFB /* Preview Assets.xcassets */; };
+		BA19309629F48515009EBFFB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA19309529F48515009EBFFB /* AVFoundation.framework */; };
+		BA19309829F48572009EBFFB /* WhisperNotionManager.swift .swift in Sources */ = {isa = PBXBuildFile; fileRef = BA19309729F48572009EBFFB /* WhisperNotionManager.swift .swift */; };
+		BA19309A29F4857A009EBFFB /* AudioRecorder.swift .swift in Sources */ = {isa = PBXBuildFile; fileRef = BA19309929F4857A009EBFFB /* AudioRecorder.swift .swift */; };
+		BA19309D29F48695009EBFFB /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = BA19309C29F48695009EBFFB /* Alamofire */; };
+		BA1930A029F486A2009EBFFB /* NotionSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BA19309F29F486A2009EBFFB /* NotionSwift */; };
+		BAEA506A29F5ECB1000669E9 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BAEA506929F5ECB1000669E9 /* Settings.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +25,10 @@
 		BA19308629F4847F009EBFFB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BA19308829F48480009EBFFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA19308B29F48480009EBFFB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BA19309529F48515009EBFFB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		BA19309729F48572009EBFFB /* WhisperNotionManager.swift .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WhisperNotionManager.swift .swift"; sourceTree = "<group>"; };
+		BA19309929F4857A009EBFFB /* AudioRecorder.swift .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AudioRecorder.swift .swift"; sourceTree = "<group>"; };
+		BAEA506929F5ECB1000669E9 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +36,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA19309629F48515009EBFFB /* AVFoundation.framework in Frameworks */,
+				BA19309D29F48695009EBFFB /* Alamofire in Frameworks */,
+				BA1930A029F486A2009EBFFB /* NotionSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -37,6 +50,7 @@
 			children = (
 				BA19308329F4847F009EBFFB /* Push To-Do */,
 				BA19308229F4847F009EBFFB /* Products */,
+				BA19309429F48515009EBFFB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,6 +66,9 @@
 			isa = PBXGroup;
 			children = (
 				BA19308429F4847F009EBFFB /* Push_To_DoApp.swift */,
+				BA19309729F48572009EBFFB /* WhisperNotionManager.swift .swift */,
+				BAEA506929F5ECB1000669E9 /* Settings.bundle */,
+				BA19309929F4857A009EBFFB /* AudioRecorder.swift .swift */,
 				BA19308629F4847F009EBFFB /* ContentView.swift */,
 				BA19308829F48480009EBFFB /* Assets.xcassets */,
 				BA19308A29F48480009EBFFB /* Preview Content */,
@@ -65,6 +82,14 @@
 				BA19308B29F48480009EBFFB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BA19309429F48515009EBFFB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BA19309529F48515009EBFFB /* AVFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +108,10 @@
 			dependencies = (
 			);
 			name = "Push To-Do";
+			packageProductDependencies = (
+				BA19309C29F48695009EBFFB /* Alamofire */,
+				BA19309F29F486A2009EBFFB /* NotionSwift */,
+			);
 			productName = "Push To-Do";
 			productReference = BA19308129F4847F009EBFFB /* Push To-Do.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +140,10 @@
 				Base,
 			);
 			mainGroup = BA19307829F4847F009EBFFB;
+			packageReferences = (
+				BA19309B29F48695009EBFFB /* XCRemoteSwiftPackageReference "Alamofire" */,
+				BA19309E29F486A2009EBFFB /* XCRemoteSwiftPackageReference "NotionSwift" */,
+			);
 			productRefGroup = BA19308229F4847F009EBFFB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA19308C29F48480009EBFFB /* Preview Assets.xcassets in Resources */,
+				BAEA506A29F5ECB1000669E9 /* Settings.bundle in Resources */,
 				BA19308929F48480009EBFFB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,6 +171,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA19309A29F4857A009EBFFB /* AudioRecorder.swift .swift in Sources */,
+				BA19309829F48572009EBFFB /* WhisperNotionManager.swift .swift in Sources */,
 				BA19308729F4847F009EBFFB /* ContentView.swift in Sources */,
 				BA19308529F4847F009EBFFB /* Push_To_DoApp.swift in Sources */,
 			);
@@ -195,7 +231,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -249,7 +285,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -264,12 +300,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Push To-Do/Preview Content\"";
 				DEVELOPMENT_TEAM = 5749LZ8TW4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "To record and push to-dos";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -293,12 +332,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Push To-Do/Preview Content\"";
 				DEVELOPMENT_TEAM = 5749LZ8TW4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "To record and push to-dos";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -339,6 +381,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BA19309B29F48695009EBFFB /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		BA19309E29F486A2009EBFFB /* XCRemoteSwiftPackageReference "NotionSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/chojnac/NotionSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.8.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BA19309C29F48695009EBFFB /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BA19309B29F48695009EBFFB /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		BA19309F29F486A2009EBFFB /* NotionSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BA19309E29F486A2009EBFFB /* XCRemoteSwiftPackageReference "NotionSwift" */;
+			productName = NotionSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BA19307929F4847F009EBFFB /* Project object */;
 }
