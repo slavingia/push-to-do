@@ -1,3 +1,6 @@
+Built in a few hours with ChatGPT. Chat logs available on Gumroad: https://sahil.gumroad.com/l/ios-with-chatgpt
+
+
 # Push To-Do
 
 The fastest, simplest way to add to-dos to Notion.
